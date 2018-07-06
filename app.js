@@ -19,7 +19,7 @@ const argv = yargs
                 title: titleOption,
                 body: bodyOption
             })
-            .command('list', 'List all command')
+            .command('list', 'List all note(s)')
             .command('read', 'Read a note', {
                 title: titleOption
             })
