@@ -24,7 +24,14 @@ if(command === 'add') {
         notes.logNote(note);
     });
 } else if(command === 'read') {
-    notes.readNote();
+    var note = notes.readNote(argv.title);
+    if(note) {
+        console.log('Note found!');
+        notes.logNote(note);
+    }
+    else {
+        console.log('Note not found!');
+    }
 } else if(command === 'remove') {
     notes.removeNote();
 } else {
