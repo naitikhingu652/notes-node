@@ -18,7 +18,11 @@ if(command === 'add') {
         console.log('Note title taken!');
     }
 } else if(command === 'list') {
-    notes.listNotes();
+    var allNotes = notes.listNotes();
+    console.log(`Printing ${allNotes.length} note(s)!`);
+    allNotes.forEach(note => {
+        notes.logNote(note);
+    });
 } else if(command === 'read') {
     notes.readNote();
 } else if(command === 'remove') {
